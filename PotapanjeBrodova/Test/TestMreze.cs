@@ -63,5 +63,24 @@ namespace UnitTest1
 
 
         }
+
+        [TestMethod]
+        public void Mreza_UkloniPoljeBacaIznimkuZaNepostojeciStupac()
+        {
+            try
+            {
+                Mreza m = new Mreza(5, 5);
+                m.UkloniPolje(1, 6);
+            }
+            catch (IndexOutOfRangeException)
+            {
+                Assert.IsTrue(true);
+            }
+            catch (Exception)
+            {
+                Assert.Fail();
+            }
+        }
+
     }
 }
