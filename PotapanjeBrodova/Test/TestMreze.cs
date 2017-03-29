@@ -82,5 +82,35 @@ namespace UnitTest1
             }
         }
 
+        [TestMethod]
+        public void Mreža_DajNizoveVraća3NizaZabrodDuljine3UHorizontalnomRetkuDuljine5()
+        {
+            Mreza m = new Mreza(1, 5);
+            Assert.AreEqual(3, m.DajNizoveSlobodnihPolja(3).Count());
+        }
+
+        [TestMethod]
+        public void Mreža_DajNizoveVraćaPrazanNizZaBrodDuljine5ZanizUHoriznotalnomNizuDuljineNizaZabrodDuljine()
+        {
+            Mreza m = new Mreza(1, 4);
+            Assert.AreEqual(0, m.DajNizoveSlobodnihPolja(5).Count());
+        }
+
+        [TestMethod]
+        public void Mreža_DajNizoveVraća3NizaZabrodDuljine5UHorizontalnomRetkuDuljine3()
+        {
+            Mreza m = new Mreza(5, 1);
+            Assert.AreEqual(3, m.DajNizoveSlobodnihPolja(3).Count());
+        }
+
+        [TestMethod]
+        public void Mreža_DajNizoveVraćaPrazanNizZaBrodDuljineZanizUHoriznotalnomNizuDuljineNizaZabrodDuljine()
+        {
+            Mreza m = new Mreza(4, 1);
+            Assert.AreEqual(0, m.DajNizoveSlobodnihPolja(5).Count());
+        }
+
+
+
     }
 }
