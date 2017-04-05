@@ -10,13 +10,13 @@ namespace Test
     public class TestTerminatoraPolja
     {
         private Mreza mreža;
-        private TerminatoraPolja terminator; 
+        private TerminatorPolja terminator; 
 
         [TestInitialize()]
         public void PripremiMrežuITerminatora()
         {
             mreža = new Mreza(10, 10);
-            terminator = new TerminatoraPolja(mreža);
+            terminator = new TerminatorPolja(mreža);
         }
 
         [TestMethod]
