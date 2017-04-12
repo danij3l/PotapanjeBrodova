@@ -13,10 +13,10 @@ namespace PotapanjeBrodova
             this.mreža = mreža;
         }
 
-        public void UkloniPolja(IEnumerable<Polje> polja)
+        public void UkloniPolja()
         {
-            //todo
-            // mreža.UkloniPolje(r,s);
+            // todo
+            // mreza.Ukloni polja
         }
 
         private Mreza mreža;
