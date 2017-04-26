@@ -30,5 +30,11 @@ namespace PotapanjeBrodova
                 return false;
             return Equals((Polje)obj);
         }
+
+        public override int GetHashCode()
+        {
+            return Redak ^ Stupac >> 16;
+        }
+
     }
 }

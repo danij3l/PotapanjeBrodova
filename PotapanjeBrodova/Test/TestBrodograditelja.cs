@@ -20,5 +20,6 @@ namespace Test
             // todo
             // provjera ima li samo jedan duljine 5 ima li dva duljine 4
         }
+
     }
 }
