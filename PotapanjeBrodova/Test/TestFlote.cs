@@ -32,6 +32,7 @@ namespace Test
             flota.DodajBrod(new Polje[] { new Polje(1, 1), new Polje(1, 2) });
             flota.DodajBrod(new Polje[] { new Polje(5, 6), new Polje(6, 6) });
             Assert.AreEqual(RezultatGađanja.Pogodak, flota.Gađaj(new Polje(5, 6)));
+            Assert.AreEqual(RezultatGađanja.Potopljen, flota.Gađaj(new Polje(6, 6)));
         }
 
         [TestMethod]

@@ -61,6 +61,7 @@
     <Compile Include="TestRedaFiksneDuljine.cs" />
     <Compile Include="TestSortiranaPolja.cs" />
     <Compile Include="TestTerminatoraPolja.cs" />
+    <Compile Include="TestTopništva.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PotapanjeBrodova\PotapanjeBrodova.csproj">
