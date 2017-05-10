@@ -52,6 +52,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Mreža.cs" />
     <Compile Include="TestBroda.cs" />
     <Compile Include="TestBrodograditelja.cs" />
     <Compile Include="TestFlote.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="TestSortiranaPolja.cs" />
     <Compile Include="TestTerminatoraPolja.cs" />
     <Compile Include="TestTopništva.cs" />
+    <Compile Include="TestKružnogPucača.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PotapanjeBrodova\PotapanjeBrodova.csproj">
