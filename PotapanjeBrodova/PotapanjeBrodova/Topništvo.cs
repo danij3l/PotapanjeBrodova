@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace PotapanjeBrodova
 {
@@ -12,7 +12,6 @@ namespace PotapanjeBrodova
         Kružno,
         Linijsko
     }
-
     public class Topništvo
     {
         public Topništvo(int redaka, int stupaca, IEnumerable<int> duljineBrodova)
@@ -20,12 +19,14 @@ namespace PotapanjeBrodova
             mreža = new Mreza(redaka, stupaca);
             this.duljineBrodova = new List<int>(duljineBrodova);
             TaktikaGađanja = TaktikaGađanja.Nasumično;
+            pucač = new SlučajniPucač();
         }
 
         public void ObradiGađanje(RezultatGađanja rezultat)
         {
             if (rezultat == RezultatGađanja.Promašaj)
                 return;
+
             if (rezultat == RezultatGađanja.Pogodak)
             {
                 switch (TaktikaGađanja)
@@ -39,13 +40,12 @@ namespace PotapanjeBrodova
                     case TaktikaGađanja.Linijsko:
                         return;
                     default:
-                        System.Diagnostics.Debug.Assert(false);
+                        Debug.Assert(false);
                         break;
                 }
             }
-            System.Diagnostics.Debug.Assert(rezultat == RezultatGađanja.Potopljen);
+            Debug.Assert(rezultat == RezultatGađanja.Potopljen);
             PromjeniTaktikuUNasumično();
-
         }
 
         private void PromjeniTaktikuUKružno()
@@ -63,10 +63,11 @@ namespace PotapanjeBrodova
             TaktikaGađanja = TaktikaGađanja.Nasumično;
         }
 
-
         public TaktikaGađanja TaktikaGađanja { get; private set; }
 
-        Mreza mreža;
-        List<int> duljineBrodova;
+        Mreža mreža;
+        private List<int> duljineBrodova;
+        IPucač pucač;
+
     }
 }
