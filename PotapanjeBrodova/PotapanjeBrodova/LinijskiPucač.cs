@@ -15,6 +15,13 @@ namespace PotapanjeBrodova
             this.duljinaBroda = duljinaBroda;
         }
 
+        public LinijskiPucač(Mreza mreza1, IEnumerable<Polje> pogođenoPolje, int v)
+        {
+            this.mreza1 = mreza1;
+            this.pogođenoPolje = pogođenoPolje;
+            this.v = v;
+        }
+
         public IEnumerable<Polje> PogođenaPolja
         {
             get
@@ -36,5 +43,8 @@ namespace PotapanjeBrodova
         private Mreža mreza;
         private IEnumerable<Polje> pogođenaPolja;
         private int duljinaBroda;
+        private Mreza mreza1;
+        private IEnumerable<Polje> pogođenoPolje;
+        private int v;
     }
 }

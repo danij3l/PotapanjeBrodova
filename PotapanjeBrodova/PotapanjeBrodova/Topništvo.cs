@@ -16,7 +16,7 @@ namespace PotapanjeBrodova
     {
         public Topništvo(int redaka, int stupaca, IEnumerable<int> duljineBrodova)
         {
-            mreza = new Mreža(redaka, stupaca);
+            mreza = new Mreza(redaka, stupaca);
             this.duljineBrodova = new List<int>(duljineBrodova);
             TaktikaGađanja = TaktikaGađanja.Nasumično;
             //  poziv pucača za mju implementaciju
@@ -52,19 +52,24 @@ namespace PotapanjeBrodova
         private void PromijeniTaktikuUKružno()
         {
             TaktikaGađanja = TaktikaGađanja.Kružno;
+            Polje pogođenoPolje = pucač.PogođenaPolja.First();
+            pucač = new KružniPucač(mreza, pogođenoPolje, duljineBrodova.First());
         }
         private void PromijeniTaktikuULinijsko()
         {
             TaktikaGađanja = TaktikaGađanja.Linijsko;
+            var pogođenoPolje = pucač.PogođenaPolja;
+            pucač = new LinijskiPucač(mreza, pogođenoPolje, duljineBrodova.First());
         }
         private void PromijeniTaktikuUNasumično()
         {
             TaktikaGađanja = TaktikaGađanja.Nasumično;
+            pucač = new SlučajniPucač(mreza, duljineBrodova.First());
         }
 
         public TaktikaGađanja TaktikaGađanja { get; private set; }
 
-        private Mreža mreza;
+        private Mreza mreza;
         private List<int> duljineBrodova;
         private IPucač pucač;
     }
