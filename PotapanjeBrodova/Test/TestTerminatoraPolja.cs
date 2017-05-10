@@ -9,14 +9,14 @@ namespace Test
     [TestClass]
     public class TestTerminatoraPolja
     {
-        private Mreza mreža;
+        private Mreza Mreza;
         private TerminatorPolja terminator;
 
         [TestInitialize()]
         public void PripremiMrežuITerminatora()
         {
-            mreža = new Mreza(10, 10);
-            terminator = new TerminatorPolja(mreža);
+            Mreza = new Mreza(10, 10);
+            terminator = new TerminatorPolja(Mreza);
         }
 
         [TestMethod]
@@ -24,7 +24,7 @@ namespace Test
         {
             IEnumerable<Polje> polja = new Polje[] { new Polje(3, 3), new Polje(3, 4) };
             terminator.UkloniPolja(polja);
-            IEnumerable<Polje> slobodnaPolja = mreža.DajSlobodnaPolja();
+            IEnumerable<Polje> slobodnaPolja = Mreza.DajSlobodnaPolja();
             Assert.AreEqual(88, slobodnaPolja.Count());
             Assert.IsFalse(slobodnaPolja.Contains(new Polje(3, 3)));
             Assert.IsFalse(slobodnaPolja.Contains(new Polje(3, 4)));
@@ -39,7 +39,7 @@ namespace Test
         {
             IEnumerable<Polje> polja = new Polje[] { new Polje(0, 3), new Polje(0, 4) };
             terminator.UkloniPolja(polja);
-            IEnumerable<Polje> slobodnaPolja = mreža.DajSlobodnaPolja();
+            IEnumerable<Polje> slobodnaPolja = Mreza.DajSlobodnaPolja();
             Assert.AreEqual(92, slobodnaPolja.Count());
             Assert.IsFalse(slobodnaPolja.Contains(new Polje(0, 3)));
             Assert.IsFalse(slobodnaPolja.Contains(new Polje(0, 4)));
@@ -54,7 +54,7 @@ namespace Test
         {
             IEnumerable<Polje> polja = new Polje[] { new Polje(0, 0), new Polje(0, 1) };
             terminator.UkloniPolja(polja);
-            IEnumerable<Polje> slobodnaPolja = mreža.DajSlobodnaPolja();
+            IEnumerable<Polje> slobodnaPolja = Mreza.DajSlobodnaPolja();
             Assert.AreEqual(94, slobodnaPolja.Count());
             Assert.IsFalse(slobodnaPolja.Contains(new Polje(0, 0)));
             Assert.IsFalse(slobodnaPolja.Contains(new Polje(0, 1)));
@@ -69,7 +69,7 @@ namespace Test
         {
             IEnumerable<Polje> polja = new Polje[] { new Polje(0, 9), new Polje(1, 9) };
             terminator.UkloniPolja(polja);
-            IEnumerable<Polje> slobodnaPolja = mreža.DajSlobodnaPolja();
+            IEnumerable<Polje> slobodnaPolja = Mreza.DajSlobodnaPolja();
             Assert.AreEqual(94, slobodnaPolja.Count());
             Assert.IsFalse(slobodnaPolja.Contains(new Polje(0, 9)));
             Assert.IsFalse(slobodnaPolja.Contains(new Polje(1, 9)));
@@ -84,7 +84,7 @@ namespace Test
         {
             IEnumerable<Polje> polja = new Polje[] { new Polje(9, 8), new Polje(9, 9) };
             terminator.UkloniPolja(polja);
-            IEnumerable<Polje> slobodnaPolja = mreža.DajSlobodnaPolja();
+            IEnumerable<Polje> slobodnaPolja = Mreza.DajSlobodnaPolja();
             Assert.AreEqual(94, slobodnaPolja.Count());
             Assert.IsFalse(slobodnaPolja.Contains(new Polje(9, 8)));
             Assert.IsFalse(slobodnaPolja.Contains(new Polje(9, 9)));
@@ -99,7 +99,7 @@ namespace Test
         {
             IEnumerable<Polje> polja = new Polje[] { new Polje(8, 0), new Polje(9, 0) };
             terminator.UkloniPolja(polja);
-            IEnumerable<Polje> slobodnaPolja = mreža.DajSlobodnaPolja();
+            IEnumerable<Polje> slobodnaPolja = Mreza.DajSlobodnaPolja();
             Assert.AreEqual(94, slobodnaPolja.Count());
             Assert.IsFalse(slobodnaPolja.Contains(new Polje(8, 0)));
             Assert.IsFalse(slobodnaPolja.Contains(new Polje(9, 0)));

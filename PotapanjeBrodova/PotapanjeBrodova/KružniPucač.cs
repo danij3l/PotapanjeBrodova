@@ -7,16 +7,13 @@ namespace PotapanjeBrodova
 {
     public class KružniPucač : IPucač
     {
-
-
-        public KružniPucač(Mreza mreza, Polje pogođeno, int duljinaBroda)
+        public KružniPucač(Mreza mreža, Polje pogođeno, int duljinaBroda)
         {
-            this.mreza = mreza;
-            prvoPogođenoPolje = pogođeno;
+            this.mreža = mreža;
+            this.prvoPogođeno = pogođeno;
             this.duljinaBroda = duljinaBroda;
         }
-
-        public IEnumerable<Polje> PogođenaPolja
+        IEnumerable<Polje> IPucač.PogođenaPolja
         {
             get
             {
@@ -29,13 +26,33 @@ namespace PotapanjeBrodova
             throw new NotImplementedException();
         }
 
+        public void ObradiGađanje(RezultatGađanja rezultat)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Polje> PogođenaPolja()
+        {
+            throw new NotImplementedException();
+        }
+
+        private IEnumerable<Polje> DajKandidate()
+        {
+            List<Polje> kandidati = new List<Polje>();
+            foreach (Smjer smjer in Enum.GetValues(typeof(Smjer)))
+            {
+                //var lista = mreža.DajNizSlobodnihPolja(prvoPogođenoPolje, smjer);
+            }
+            return kandidati;
+        }
+
         public void ObradiGađanja(RezultatGađanja rezultat)
         {
             throw new NotImplementedException();
         }
 
-        private Mreža mreza;
-        private Polje prvoPogođenoPolje;
+        private Mreza mreža;
+        private Polje prvoPogođeno;
         private int duljinaBroda;
     }
 }

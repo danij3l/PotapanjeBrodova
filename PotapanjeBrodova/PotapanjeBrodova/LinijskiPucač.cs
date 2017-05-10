@@ -8,21 +8,13 @@ namespace PotapanjeBrodova
     public class LinijskiPucač : IPucač
     {
 
-        public LinijskiPucač(Mreža mreza, IEnumerable<Polje> pogođeni, int duljinaBroda)
+        public LinijskiPucač(Mreza mreža, IEnumerable<Polje> pogođena, int duljinaBroda)
         {
-            this.mreza = mreza;
-            pogođenaPolja = pogođeni;
+            this.mreža = mreža;
+            this.pogođenaPolja = pogođena;
             this.duljinaBroda = duljinaBroda;
         }
-
-        public LinijskiPucač(Mreza mreza1, IEnumerable<Polje> pogođenoPolje, int v)
-        {
-            this.mreza1 = mreza1;
-            this.pogođenoPolje = pogođenoPolje;
-            this.v = v;
-        }
-
-        public IEnumerable<Polje> PogođenaPolja
+        IEnumerable<Polje> IPucač.PogođenaPolja
         {
             get
             {
@@ -35,16 +27,23 @@ namespace PotapanjeBrodova
             throw new NotImplementedException();
         }
 
+        public void ObradiGađanje(RezultatGađanja rezultat)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IEnumerable<Polje> PogođenaPolja()
+        {
+            throw new NotImplementedException();
+        }
+
         public void ObradiGađanja(RezultatGađanja rezultat)
         {
             throw new NotImplementedException();
         }
 
-        private Mreža mreza;
+        private Mreza mreža;
         private IEnumerable<Polje> pogođenaPolja;
         private int duljinaBroda;
-        private Mreza mreza1;
-        private IEnumerable<Polje> pogođenoPolje;
-        private int v;
     }
 }

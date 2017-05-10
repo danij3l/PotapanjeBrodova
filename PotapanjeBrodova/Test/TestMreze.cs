@@ -152,5 +152,38 @@ namespace Test
             Assert.AreEqual(1, nizoviPolja.Where(n => n.Contains(new Polje(7, 0))).Count());
             Assert.AreEqual(1, nizoviPolja.Where(n => n.Contains(new Polje(8, 0))).Count());
         }
+        [TestMethod]
+        public void Mreza_DajNizSlobodnihPoljaVraćaDvaPoljaDesno()
+        {
+            Mreza mreza = new Mreza(5, 5);
+            var polja = mreza.DajNizSlobodnihPolja(new Polje(2, 2), Smjer.Desno);
+            Assert.AreEqual(2, polja.Count());
+            Assert.AreEqual(new Polje(2, 3), polja.First());
+        }
+        [TestMethod]
+        public void Mreza_DajNizSlobodnihPoljaVraćaDvaPoljaDolje()
+        {
+            Mreza mreza = new Mreza(5, 5);
+            var polja = mreza.DajNizSlobodnihPolja(new Polje(2, 2), Smjer.Dolje);
+            Assert.AreEqual(2, polja.Count());
+            Assert.AreEqual(new Polje(3, 2), polja.First());
+        }
+        [TestMethod]
+        public void Mreza_DajNizSlobodnihPoljaVraćaDvaPoljaLijevo()
+        {
+            Mreza mreza = new Mreza(5, 5);
+            var polja = mreza.DajNizSlobodnihPolja(new Polje(2, 2), Smjer.Lijevo);
+            Assert.AreEqual(2, polja.Count());
+            Assert.AreEqual(new Polje(2, 1), polja.First());
+        }
+        [TestMethod]
+        public void Mreza_DajNizSlobodnihPoljaVraćaDvaPoljaGore()
+        {
+            Mreza mreza = new Mreza(5, 5);
+            var polja = mreza.DajNizSlobodnihPolja(new Polje(2, 2), Smjer.Gore);
+            Assert.AreEqual(2, polja.Count());
+            Assert.AreEqual(new Polje(1, 2), polja.First());
+        }
+
     }
 }

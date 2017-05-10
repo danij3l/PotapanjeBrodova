@@ -1,10 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
 namespace PotapanjeBrodova
 {
+    public enum Smjer
+    {
+        Desno,
+        Dolje,
+        Lijevo,
+        Gore
+    }
     public class Mreza
     {
         public Mreza(int redaka, int stupaca)
@@ -36,6 +44,71 @@ namespace PotapanjeBrodova
         public void UkloniPolje(int redak, int stupac)
         {
             polja[redak, stupac] = null;
+        }
+
+        public IEnumerable<Polje> DajNizSlobodnihPolja(Polje polje, Smjer smjer)
+        {
+            switch (smjer)
+            {
+                case Smjer.Desno:
+                    return DajSlobodnaPoljaDesno(polje);
+                case Smjer.Dolje:
+                    return DajSlobodnaPoljaDolje(polje);
+                case Smjer.Lijevo:
+                    return DajSlobodnaPoljaLijevo(polje);
+                case Smjer.Gore:
+                    return DajSlobodnaPoljaGore(polje);
+                default:
+                    Debug.Assert(false);
+                    break;
+            }
+            return new List<Polje>();
+        }
+
+        private IEnumerable<Polje> DajSlobodnaPoljaDesno(Polje polje)
+        {
+            List<Polje> rezultat = new List<Polje>();
+            for (int s = polje.Stupac + 1; s < Stupaca; s++)
+            {
+                if (polja[polje.Redak, s] == null)
+                    break;
+                rezultat.Add(polja[polje.Redak, s]);
+            }
+            return rezultat;
+        }
+
+        private IEnumerable<Polje> DajSlobodnaPoljaDolje(Polje polje)
+        {
+            List<Polje> rezultat = new List<Polje>();
+            for (int s = polje.Redak + 1; s < Redaka; s++)
+            {
+                if (polja[polje.Stupac, s] == null)
+                    break;
+                rezultat.Add(polja[s, polje.Stupac]);
+            }
+            return rezultat;
+        }
+        private IEnumerable<Polje> DajSlobodnaPoljaLijevo(Polje polje)
+        {
+            List<Polje> rezultat = new List<Polje>();
+            for (int s = polje.Stupac - 1; s >= 0; s--)
+            {
+                if (polja[polje.Redak, s] == null)
+                    break;
+                rezultat.Add(polja[polje.Redak, s]);
+            }
+            return rezultat;
+        }
+        private IEnumerable<Polje> DajSlobodnaPoljaGore(Polje polje)
+        {
+            List<Polje> rezultat = new List<Polje>();
+            for (int s = polje.Redak - 1; s >= 0; s--)
+            {
+                if (polja[polje.Stupac, s] == null)
+                    break;
+                rezultat.Add(polja[s, polje.Stupac]);
+            }
+            return rezultat;
         }
 
         public void UkloniPolje(Polje p)
@@ -88,7 +161,7 @@ namespace PotapanjeBrodova
             return DajNizoveSlobodnihPolja(duljinaNiza, DajNizBrojeva(Stupaca), DajNizBrojeva(Redaka), (i, j) => polja[j, i]);
         }
 
-        private Polje[,] polja;
+        public Polje[,] polja;
 
         public readonly int Redaka;
         public readonly int Stupaca;
