@@ -7,10 +7,18 @@ namespace PotapanjeBrodova
 {
     public class SlučajniPucač : IPucač
     {
+        // moja implementacija konstruktora za slučajniPucač
         public SlučajniPucač(Mreza mreza, List<int> brodovi)
         {
             this.mreza = mreza;
             najdužiBrod = brodovi.Max();
+        }
+
+        // konstruktor napravljen na vježbi
+        public SlučajniPucač(Mreza mreza, int duljinaBroda)
+        {
+            this.mreza = mreza;
+            this.najdužiBrod = duljinaBroda;
         }
 
         Polje TraziNajboljePolje()
@@ -59,5 +67,13 @@ namespace PotapanjeBrodova
         private Mreza mreza;
         private int najdužiBrod;
         private Random slucajniBroj = new Random();
+
+        public IEnumerable<Polje> PogođenaPolja
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }
