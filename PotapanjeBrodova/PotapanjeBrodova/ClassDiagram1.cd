@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PotapanjeBrodova.Brod" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAQAAAAQAAAAAAAA=</HashCode>
+      <FileName>Brod.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PotapanjeBrodova.Brodograditelj" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Brodograditelj.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PotapanjeBrodova.Flota" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAQAAAAAAIAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Flota.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PotapanjeBrodova.KružniPucač" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAQAAAAAAAQIAAgAAAAAAAAAAAAFAABABAAA=</HashCode>
+      <FileName>KružniPucač.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PotapanjeBrodova.LinijskiPucač" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAQAAAAAAAQIAAAAAAAAAAQAAAAEAABABAAA=</HashCode>
+      <FileName>LinijskiPucač.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PotapanjeBrodova.Mreza" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAEAAAEAAECAAAEAAAAABoAAAAQIABAAAGA=</HashCode>
+      <FileName>Mreza.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PotapanjeBrodova.Polje" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAQAAAAIAAAAAIAAAAAAA=</HashCode>
+      <FileName>Polje.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PotapanjeBrodova.Proširenja" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA=</HashCode>
+      <FileName>Proširenja.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PotapanjeBrodova.RedFiksneDuljine&lt;T&gt;" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RedFiksneDuljine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PotapanjeBrodova.SlučajniPucač" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAAAAAAAAAICEAAAQAAAAAAAAAEAAAABACA=</HashCode>
+      <FileName>SlučajniPucač.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="PotapanjeBrodova.TerminatorPolja" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>TerminatorPolja.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PotapanjeBrodova.Topništvo" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAEAAAAkAAAAgAAAAAAAAAAAEAAAAAACABAAAAA=</HashCode>
+      <FileName>Topništvo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="PotapanjeBrodova.IGađani" Collapsed="true">
+    <Position X="0.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IGađani.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="PotapanjeBrodova.IPucač" Collapsed="true">
+    <Position X="2.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAEAAAABAAA=</HashCode>
+      <FileName>IPucač.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="PotapanjeBrodova.RezultatGađanja" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAAAAg=</HashCode>
+      <FileName>IGađani.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PotapanjeBrodova.Smjer" Collapsed="true">
+    <Position X="2.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAQAAAAAAAAEAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Mreza.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="PotapanjeBrodova.TaktikaGađanja" Collapsed="true">
+    <Position X="4" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAACAAAAAAAAAABAAAAAAAAAABAAA=</HashCode>
+      <FileName>Topništvo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

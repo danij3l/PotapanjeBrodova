@@ -23,7 +23,7 @@ namespace PotapanjeBrodova
             return flota;
         }
 
-
+        
         // obratiti pažnju na slučaj da se ne mogu svi brodovi složiti
 
         private Random slucajni = new Random();
